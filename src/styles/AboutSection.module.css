@@ -1,0 +1,691 @@
+.container {
+    
+    padding: 40px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px; 
+    position: relative; 
+    top: -80px; 
+}
+
+/* Homegrown Indian Brand Section */
+.homegrownSection {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    background-color: #ff56a2; /* Red background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.homegrownTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.homegrownSubtitle {
+    font-size: 1.2rem;
+    color: #000; /* Black text for subtitle */
+    background-color: #fff; /* White background for subtitle */
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.homegrownSubtitle strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* About Us Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.textContent {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ff56a2;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    text-align:justify;
+    padding-right: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+
+
+}
+
+/* Specialties Section */
+.specialties {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.specialty {
+    margin-top: 200px;
+    width: 200px;
+    margin: 10px;
+    border: 2px solid #ff56a2;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.specialty:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ff56a2;
+}
+
+.iconContainer {
+    font-size: 3rem;
+    color: #ff56a2;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.specialty:hover .iconContainer {
+    color: #fff;
+}
+
+.specialtyName {
+    font-size: 1.5rem;
+    color: #ff56a2;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
+}
+
+.specialty:hover .specialtyName {
+    color: #fff;
+}
+
+.specialtyDescription {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s;
+}
+
+.specialty:hover .specialtyDescription {
+    color: #fff;
+}
+
+.specialtiesList {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.videoContent {
+    flex: 1;
+    min-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Cards Section */
+.cardsSection {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    height: 100px;
+    width: auto;
+    max-width: 180px;
+    display: flex;
+    padding: 20px;
+    border: 2px solid #ff56a2;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ff56a2;
+    
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardIconContainer {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Collage Section */
+.collageSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box; /* Add this */
+}
+
+.collageTitle {
+    font-size: 2rem;
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.collageTitle:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff6f61;
+    border-radius: 2px;
+}
+
+.collageContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 15px;
+    padding: 5px;
+    width: 100%; /* Add this */
+    box-sizing: border-box; /* Add this */
+}
+
+.collageItem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collageItem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.collageItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collageItem:hover img {
+    transform: scale(1.1);
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.collageItem:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Responsive Design for Collage */
+@media (max-width: 768px) {
+    .collageContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 180px);
+    }
+    
+    .large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .medium {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .collageTitle {
+        font-size: 1.8rem;
+    }
+
+    .collageSection {
+        padding: 15px;
+        width: 95%; /* Set percentage width */
+        margin-left: auto; /* Center it */
+        margin-right: auto; /* Center it */
+    }
+    
+    .collageContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 180px);
+        gap: 10px;
+        padding: 0; /* Remove padding */
+    }
+    
+    /* Other styles remain the same */
+}
+
+@media (max-width: 480px) {
+    .collageContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 180px);
+        gap: 10px;
+    }
+    
+    .large, .medium, .small {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .collageTitle {
+        font-size: 1.5rem;
+    }
+
+    .collageSection {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .collageContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 180px);
+        gap: 10px;
+        padding: 0; /* Remove padding */
+        width: 100%; /* Ensure full width */
+    }
+    
+    /* Other styles remain the same */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textContent {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .specialtiesList {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .videoContent {
+        min-width: 100%;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .tapToUnmute {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .cardsSection {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%; /* Adjust card width for smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    .specialties {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .specialty {
+        width: 90%; /* Adjust specialty card width for smaller screens */
+        margin: 20px 0;
+    }
+
+    .homegrownSection {
+        padding: 15px 10px;
+    }
+
+    .homegrownTitle {
+        font-size: 1.2rem;
+    }
+
+    .homegrownSubtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .specialtyName {
+        font-size: 1.2rem;
+    }
+
+    .specialtyDescription {
+        font-size: 0.9rem;
+    }
+}
+
+/* Team Section Styling */
+.teamSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.teamTitle {
+    font-size: 2.5rem;
+    color: #ff56a2;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.teamSubtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* First row styling for leadership */
+.teamGrid > div:nth-child(-n+4) {
+    grid-column: span 1;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+/* Highlight the CEO and Founder */
+.teamGrid > div:nth-child(1),
+.teamGrid > div:nth-child(2) {
+    border-bottom: 3px solid #ff56a2;
+}
+
+.teamMember {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamMember:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.memberImageContainer {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.memberImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.teamMember:hover .memberImage {
+    transform: scale(1.1);
+}
+
+.memberInfo {
+    padding: 20px 15px;
+}
+
+.memberName {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.memberRole {
+    font-size: 1rem;
+    color: #ff56a2;
+    font-weight: bold;
+    margin: 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.memberDescription {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socialIcon {
+    color: #ff56a2;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon:hover {
+    color: #d10090;
+    transform: scale(1.2);
+}
+
+/* Responsive styles for team section */
+@media (max-width: 1024px) {
+    .teamGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .teamGrid > div:nth-child(-n+3) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .teamSection {
+        margin: 50px auto 30px;
+        padding: 15px;
+    }
+    
+    .teamTitle {
+        font-size: 2rem;
+    }
+    
+    .teamSubtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .memberImageContainer {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teamSection {
+        margin: 30px auto 20px;
+        padding: 10px;
+    }
+    
+    .teamTitle {
+        font-size: 1.8rem;
+    }
+    
+    .teamSubtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .teamGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .memberImageContainer {
+        height: 220px;
+    }
+    
+    .memberName {
+        font-size: 1.2rem;
+    }
+    
+    .memberRole {
+        font-size: 0.9rem;
+    }
+    
+    .memberDescription {
+        font-size: 0.8rem;
+    }
+}

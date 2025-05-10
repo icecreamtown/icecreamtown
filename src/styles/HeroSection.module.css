@@ -1,0 +1,280 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh; /* Almost full viewport height */
+    width: 100%;
+    padding: 50px 80px;
+    background-color: #f9f9f900;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    margin-top: 10px; /* Space for fixed navbar */
+    box-sizing: border-box; /* Add this to include padding in width calculation */
+}
+
+.heroSection .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+    z-index: 1;
+}
+
+.heroSection .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.textContent {
+    flex: 1;
+    color: #333;
+    text-align: left;
+    z-index: 11;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.textContent h1 {
+    font-size: 4rem;
+    margin: 0 0 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    color: #333;
+    word-wrap: break-word; /* Add this to prevent text overflow */
+}
+
+.textContent p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    word-wrap: break-word; /* Add this to prevent text overflow */
+}
+
+.textContent .ctaButton {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff56a2, #fd2e9d);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.textContent .ctaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(246, 0, 175, 0.3);
+}
+
+.carousel {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: visible;
+}
+
+.wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    animation: spin 9s linear infinite;
+    z-index: 5;
+}
+
+.carouselItem {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform-origin: center center;
+    transition: transform 0.5s ease;
+}
+
+.carouselItem img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.carouselItem.active img {
+    transform: scale(1.4);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for the wheel rotation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Large screens optimization */
+@media (min-width: 1440px) {
+    .heroSection {
+        padding: 50px 120px;
+    }
+    
+    .textContent h1 {
+        font-size: 4.5rem;
+    }
+    
+    .wheel {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .carouselItem img {
+        width: 120px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+    .heroSection {
+        padding: 40px 60px;
+    }
+    
+    .textContent h1 {
+        font-size: 3.5rem;
+    }
+    
+    .carouselItem img {
+        width: 90px;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+    .heroSection {
+        padding: 30px 40px;
+    }
+    
+    .textContent h1 {
+        font-size: 3rem;
+    }
+    
+    .wheel {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .heroSection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 30px 15px; /* Reduced horizontal padding */
+        margin-top: 50px;
+        width: 100vw; /* Force full viewport width */
+        max-width: 100%; /* Prevent overflow */
+        box-sizing: border-box;
+    }
+
+    .textContent {
+        text-align: center;
+        margin-bottom: 20px;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .textContent h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+        margin: 0 0 15px; /* Reduced bottom margin */
+        word-break: break-word; /* Ensure text wraps properly */
+        hyphens: auto;
+    }
+
+    .textContent p {
+        font-size: 1.2rem;
+        margin: 10px 0; /* Reduced vertical margins */
+        word-break: break-word;
+    }
+
+    .textContent .ctaButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: fit-content; /* Prevent button from stretching */
+        margin: 10px auto 0; /* Center button and adjust top margin */
+        display: block; /* Make it block for better mobile layout */
+    }
+
+    .carousel {
+        display: none; /* Hide the entire carousel on mobile */
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 20px 10px; /* Further reduced padding */
+        margin-top: 40px;
+        overflow-x: hidden; /* Hide horizontal overflow */
+    }
+    
+    .textContent h1 {
+        font-size: 1.8rem; /* Smaller font size for very small screens */
+        padding: 0 5px; /* Add some padding inside the heading */
+    }
+    
+    .textContent p {
+        font-size: 0.95rem; /* Smaller font size */
+        padding: 0 5px; /* Add some padding inside the paragraph */
+    }
+    
+    .textContent .ctaButton {
+        font-size: 0.9rem;
+        padding: 8px 15px; /* Smaller padding */
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    .heroSection {
+        padding: 15px 8px;
+        margin-top: 30px;
+    }
+    
+    .textContent h1 {
+        font-size: 1.6rem;
+    }
+}

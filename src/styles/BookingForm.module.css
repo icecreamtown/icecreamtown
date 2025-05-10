@@ -1,0 +1,253 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 10px;
+    position: relative;
+    top: -50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.inputField {
+    margin-bottom: 15px;
+    padding-right: 20px;
+}
+
+.inputField label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    display: block;
+}
+
+.inputField input,
+.inputField select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #555;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField input:focus,
+.inputField select:focus {
+    border-color: #ff56a2;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+    outline: none;
+}
+
+.submitButton {
+    background-color: #ff56a2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+    background-color:green;
+    transform: translateY(-2px);
+}
+
+.submitButton:active {
+    background-color: green;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff56a2;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.eventGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.eventImage {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eventImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        top: -10px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .inputField input,
+    .inputField select {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .submitButton {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: 15px;
+    }
+
+    .inputField input,
+    .inputField select {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .submitButton {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Add these styles to your existing BookingForm.module.css */
+.whatsappButton {
+    background-color: #25D366 !important; /* WhatsApp green color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.whatsappButton:hover {
+    background-color: #1da851 !important; /* Darker green on hover */
+}
+
+.whatsappIcon {
+    font-size: 1.2em;
+}
+
+.successMessage {
+    background-color: #e7f7e7;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add these styles to your existing d:\Freelance\deena\src\styles\BookingForm.module.css */
+.bookingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formToggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.toggleBtn {
+    flex: 1;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.toggleBtn:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.toggleBtn:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.toggleBtn.active {
+    background-color: #ff56a2;
+    color: white;
+    border-color: #ff56a2;
+    box-shadow: 0 2px 8px rgba(246, 0, 175, 0.4);
+}
+
+.formContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .formToggle {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .toggleBtn {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
