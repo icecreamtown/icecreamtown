@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import Loader from './components/Loader';
 import PageTransition from './components/PageTransition';
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
     const [initialLoading, setInitialLoading] = useState(true);
