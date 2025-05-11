@@ -45,6 +45,7 @@ const App = () => {
                     <FloatingButtons />
                 </PageTransition>
             </Router>
+             <Analytics />
         </>
     );
 };
