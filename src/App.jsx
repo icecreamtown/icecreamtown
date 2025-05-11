@@ -18,11 +18,9 @@ const App = () => {
     const [initialLoading, setInitialLoading] = useState(true);
 
     useEffect(() => {
-        // This will hide the initial loader after 500ms (0.5 seconds)
         const timer = setTimeout(() => {
             setInitialLoading(false);
         }, 500);
-        
         return () => clearTimeout(timer);
     }, []);
 
@@ -45,7 +43,7 @@ const App = () => {
                     <FloatingButtons />
                 </PageTransition>
             </Router>
-             <Analytics />
+            <Analytics /> {/* Add this outside the Router */}
         </>
     );
 };
