@@ -40,7 +40,7 @@ html, body {
 }
 
 .logo {
-    height: 165px;
+    height: 140px;
     margin-right: 10px;
     margin-left: 40px;
     transition: transform 0.3s ease, height 0.3s ease;
